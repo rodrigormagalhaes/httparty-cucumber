@@ -2,10 +2,12 @@
 
 @product
 Funcionalidade: Busca de Produtos
-    Adicionar descrição aqui
+    Como um usuário do Sistema
+    Eu quero realizar as requisições na API
+    Para realizar busca de produtos
 
     Contexto:
-        Dado que tenho o endereço da API
+        Dado que tenho o endereço de busca de pedidos da API
     
     Cenário: Busca produto
         Quando realizo uma requisição para buscar um produto

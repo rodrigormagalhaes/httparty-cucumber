@@ -8,11 +8,30 @@ class Product
         @body = {:body => bodyValue}
     end
     
-    def creatProduct
+    def createProduct
         self.class.post('/product', @body)
     end
 
-    def getProduct(id)
-        self.class.get("/product/#{id}", {})
+    def getProduct(idValue)
+        self.class.get("/product/#{idValue}", {})
     end
+
+    def updateProduct(idValue)       
+        @bodyEdit = {:body =>
+            {
+                "name": CHANGE_NAME,
+                "description": CHANGE_DESCRIPTION,
+                "image": CHANGE_IMAGE,
+                "amount": CHANGE_AMOUNT,       
+                "quantity": CHANGE_QUANTITY,
+                "createdAt": CHANGE_CREATED_AT}
+            }
+
+        self.class.put("/product/#{idValue}", @bodyEdit)
+    end
+
+    def deleteProduct(idValue)
+        self.class.delete("/product/#{idValue}",{})
+    end
+
 end

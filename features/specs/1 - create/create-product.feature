@@ -7,7 +7,7 @@ Funcionalidade: Cadastrar Produtos
     Para realizar cadastro de produtos
 
     Contexto:
-        Dado que tenho o endereço da API
+        Dado que tenho o endereço de criação de produtos da API
 
     Cenário: Cadastrar produto
         Quando realizo uma requisição para cadastrar um produto
