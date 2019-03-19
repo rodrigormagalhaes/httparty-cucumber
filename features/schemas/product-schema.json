@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "id": {
+            "type": "string",
+            "minLength": 1
+        },
+        "name": {
+            "type": "string",
+            "minLength": 2
+        },
+        "description": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 35
+        },
+        "image": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^(https?|wss?|ftp)://"
+        },
+        "quantity": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2
+        },
+        "amount": {
+            "type": "string"
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}
