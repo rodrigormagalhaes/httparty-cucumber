@@ -1,8 +1,8 @@
 ### Automação de testes de contrato de API com Httparty e Cucumber
 
 - **Pré requisito**
-  > [Ruby](https://www.ruby-lang.org/pt/documentation/installation/) 
-  > [Bundler](https://bundler.io/)
+  - > [Ruby](https://www.ruby-lang.org/pt/documentation/installation/) 
+  - > [Bundler](https://bundler.io/)
 
 - **Instalar**:
 ```
