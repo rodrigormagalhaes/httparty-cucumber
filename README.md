@@ -16,7 +16,7 @@ cucumber
 
 - **Relatório html**: 
   > ./report.html
- 
+
 
 #### Tecnologias
 
@@ -31,3 +31,5 @@ cucumber
 - [RSpec](http://rspec.info/)
 
 - [MockAPI](https://www.mockapi.io)
+
+- [Faker](https://github.com/stympy/faker)
