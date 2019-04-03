@@ -20,5 +20,15 @@ pipeline {
                 sh 'cucumber'
             }
 		}
+
+        stage ('Cucumber Reports') {
+            steps {
+                cucumber buildStatus: "UNSTABLE",
+                    fileIncludePattern: "**/cucumber.json",
+                    jsonReportDirectory: 'target'
+
+            }
+
+        }
     }
 }
