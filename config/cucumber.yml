@@ -1,3 +1,5 @@
-default: -p html_report
+default: -p json_report
 
 html_report: --format pretty --format html --out=report.html
+
+json_report: --format pretty --format html --out=report.json
