@@ -2,7 +2,12 @@ pipeline {
     agent { docker { image 'ruby' } }
     
     stages {
-       
+        stage('Clone') {
+            steps {
+                checkout scm
+            }            
+        }
+
         stage('Config') {
             steps {
                 sh 'gem install bundler'
