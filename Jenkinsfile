@@ -1,10 +1,6 @@
 pipeline {
     agent { docker { image 'ruby' } }
     
-    def workspace = pwd()
-
-    deleteDir()
-    
     stages {
         stage('Config') {
             steps {
