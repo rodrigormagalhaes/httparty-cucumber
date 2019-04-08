@@ -4,14 +4,13 @@ pipeline {
     stages {
         stage('Config') {
             steps {
-                sh 'gem install bundler'
-                sh 'bundle install'
+                sh 'npm install'
             }	
 		}
 
         stage('Test') {
             steps {
-                sh 'cucumber'
+                sh 'npm test'
             }
 		}
 
