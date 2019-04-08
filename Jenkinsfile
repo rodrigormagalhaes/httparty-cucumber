@@ -1,6 +1,8 @@
 pipeline {
     agent { docker { image 'ruby' } }
     
+    deleteDir()
+    
     stages {
         stage('Config') {
             steps {
