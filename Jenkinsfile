@@ -15,7 +15,7 @@ pipeline {
                 try {
                     sh 'cucumber'
 
-                } catch {
+                } catch (exc) {
                     echo 'Something failed!'
 
                 }                
