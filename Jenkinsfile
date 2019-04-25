@@ -16,7 +16,7 @@ pipeline {
                     sh 'cucumber'
                  }
 
-            } catch {
+            } catch (Exception e) {
                 echo "failure"
 
             }          
