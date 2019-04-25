@@ -12,14 +12,21 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'cucumber'
+                try {
+                    sh 'cucumber'
+
+                } catch {
+                    echo 'Something failed!'
+
+                }                
             }
 		}
 
         stage ('Cucumber Reports') {
             steps {
-                fileIncludePattern: "**/report.json",
-                jsonReportDirectory: '.'
+                cucumber buildStatus: "UNSTABLE",
+                    fileIncludePattern: "**/report.json",
+                    jsonReportDirectory: '.'
             }
         }
     }
