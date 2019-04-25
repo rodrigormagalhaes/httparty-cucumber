@@ -7,10 +7,21 @@ Quando("realizo uma requisição para cadastrar um produto") do
 end
 
 Então("a API retornará as informações do produto cadastrado") do
-    expect($response.code).to eq(201)
+    
+    $id = $response['id'] 
+    
+    puts $response['id']
+    puts $response['name']
+    puts $response['description']
+    puts $response['image']
+    puts $response['amount']
+    puts $response['quantity']
+    puts $response['createdAt']
+    
+    expect($response.code).to eq(200)
     expect($response.message).to eq('Created')
     expect($response.body).to match_json_schema('product-schema')
 
-    $id = $response['id']  
+     
   
 end

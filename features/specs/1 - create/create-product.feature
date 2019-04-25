@@ -1,6 +1,6 @@
 #language: pt
 
-@product
+@product @create
 Funcionalidade: Cadastrar Produtos
     Como um usuário do Sistema
     Eu quero realizar as requisições na API
