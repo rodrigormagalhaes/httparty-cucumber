@@ -11,15 +11,16 @@ pipeline {
 		}
 
         stage('Test') {
-            steps {
-                try {
+            try {
+                steps {
                     sh 'cucumber'
+                 }
 
-                } catch (exc) {
-                    echo 'Something failed!'
+            } catch {
+                echo "failure"
 
-                }                
-            }
+            }          
+
 		}
 
         stage ('Cucumber Reports') {
