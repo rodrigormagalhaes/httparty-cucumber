@@ -22,12 +22,12 @@ pipeline {
                     fileIncludePattern: "**/report.json",
                     jsonReportDirectory: '.'	 
             }
-        }	        
-
-        post { 
-            always { 
-                cleanWs()
-            }
+        }	
+    }
+    
+    post {
+        always {
+            cleanWs()
         }
     }
 }
