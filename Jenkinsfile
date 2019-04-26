@@ -12,14 +12,18 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'cucumber'
-                cucumber buildStatus: "UNSTABLE",
-                    fileIncludePattern: "**/report.json",
-                    jsonReportDirectory: '.'   
+                sh 'cucumber'                
             }
         }
-    }
-    
+        
+        stage ('Cucumber Reports') {
+            steps {
+                cucumber buildStatus: "UNSTABLE",
+                    fileIncludePattern: "**/report.json",
+                    jsonReportDirectory: '.'	 
+            }
+        }	        
+
     post { 
         always { 
             cleanWs()
