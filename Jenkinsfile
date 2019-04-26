@@ -10,23 +10,12 @@ pipeline {
             }	
 		}
 
-        try {
-            stage('Test') {
-                steps {
-                    sh 'cucumber'
-                }
-            }
-
-        } catch(Exception e)  {
-            echo 'failure'
-
-        }
-
-        stage ('Cucumber Reports') {
+        stage('Test') {
             steps {
+                sh 'cucumber'
                 cucumber buildStatus: "UNSTABLE",
                     fileIncludePattern: "**/report.json",
-                    jsonReportDirectory: '.'
+                    jsonReportDirectory: '.'   
             }
         }
     }
