@@ -17,11 +17,12 @@ pipeline {
         }
     }
     
-    post {
+    post('Report') {
         always {
             cucumber buildStatus: "UNSTABLE",
                     fileIncludePattern: "**/report.json",
                     jsonReportDirectory: '.'
+            
             cleanWs()
         }
     }
