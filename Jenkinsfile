@@ -23,6 +23,7 @@ pipeline {
                     fileIncludePattern: "**/report.json",
                     jsonReportDirectory: '.'
             
+            cleanWs()
         }
     }
 }
