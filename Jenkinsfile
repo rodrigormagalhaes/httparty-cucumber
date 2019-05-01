@@ -17,7 +17,7 @@ pipeline {
         }
     }
     
-    post('Report') {
+    post {
         always {
             cucumber buildStatus: "UNSTABLE",
                     fileIncludePattern: "**/report.json",
