@@ -23,6 +23,12 @@ pipeline {
                 }
             }
         }
+
+        stage('Slack notification') {
+            steps {
+                slackSend color:"good", message: "Teste finalizado"                 
+            }
+        }
     }
     
     post {
