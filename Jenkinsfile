@@ -14,15 +14,19 @@ pipeline {
             steps {
                 sh 'cucumber'                
             }
+
+            post {
+                always {
+                    cucumber buildStatus: "UNSTABLE",
+                        fileIncludePattern: "**/report.json",
+                        jsonReportDirectory: '.'
+                }
+            }
         }
     }
     
     post {
         always {
-            cucumber buildStatus: "UNSTABLE",
-                    fileIncludePattern: "**/report.json",
-                    jsonReportDirectory: '.'
-            
             cleanWs()
         }
     }
