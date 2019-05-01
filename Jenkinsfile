@@ -31,11 +31,11 @@ pipeline {
         }
 
         success {
-            slackSend color:"green", message: "Teste finalizado com sucesso!" 
+            slackSend color:"good", message: "Teste finalizado com sucesso!" 
         }
 
         failure {
-            slackSend color:"red", message: "Teste finalizado com erro!" 
+            slackSend color:"danger", message: "Teste finalizado com erro!" 
         }
     }
 }

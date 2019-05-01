@@ -18,7 +18,7 @@ Então("a API retornará as informações do produto cadastrado") do
     puts $response['quantity']
     puts $response['createdAt']
     
-    expect($response.code).to eq(201)
+    expect($response.code).to eq(200)
     expect($response.message).to eq('Created')
     expect($response.body).to match_json_schema('product-schema')
 
