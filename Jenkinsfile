@@ -23,17 +23,19 @@ pipeline {
                 }
             }
         }
-
-        stage('Slack notification') {
-            steps {
-                slackSend color:"good", message: "Teste finalizado"                 
-            }
-        }
     }
     
     post {
         always {
             cleanWs()
+        }
+
+        success {
+            slackSend color:"green", message: "Teste finalizado com sucesso!" 
+        }
+
+        failure {
+            slackSend color:"red", message: "Teste finalizado com erro!" 
         }
     }
 }
