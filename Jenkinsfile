@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Start Notification') {
             steps {
-                slackSend message: "Iniciando testes automatizados API. JOB: <${env.JOB_NAME}>. Branch <${env.GIT_BRANCH}> :pray:"
+                slackSend message: "Iniciando testes automatizados API. Job: '${env.JOB_NAME}'. Branch '${env.GIT_BRANCH}' :pray:"
             }	
         }
 
