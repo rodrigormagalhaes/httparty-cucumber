@@ -37,7 +37,7 @@ pipeline {
         }
 
         success {
-            slackSend color:"good", message: "Testes finalizados com sucesso! <${env.BUILD_URL}> :sunglasses:"
+            slackSend color:"good", message: "Testes finalizados com sucesso! <${env.BUILD_URL}> :party_blob:"
         }
 
         failure {
