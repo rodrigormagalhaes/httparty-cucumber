@@ -31,11 +31,11 @@ pipeline {
         }
 
         success {
-            slackSend color:"good", message: "Teste finalizado com sucesso!", icon_emoji: ":sunglasses:"
+            slackSend color:"good", message: "Testes finalizados com sucesso! <${env.BUILD_URL}> :sunglasses:"
         }
 
         failure {
-            slackSend color:"danger", message: "Teste finalizado com erro! <${env.BUILD_URL}>", icon_emoji: ":cold_sweat:"
+            slackSend color:"danger", message: "Testes finalizados com erro! <${env.BUILD_URL}> :cold_sweat:"
         }
     }
 }
