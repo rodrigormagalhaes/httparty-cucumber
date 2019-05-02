@@ -2,6 +2,12 @@ pipeline {
     agent { docker { image 'ruby' } }
     
     stages {
+        stage('Start Notification') {
+            steps {
+                slackSend message: "Iniciando testes automatizados API :pray:"
+            }	
+        }
+
         stage('Config') {
             steps {
                 sh 'ruby -v'
