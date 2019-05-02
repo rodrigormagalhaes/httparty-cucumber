@@ -35,7 +35,7 @@ pipeline {
         }
 
         failure {
-            slackSend color:"danger", message: "Teste finalizado com erro!", icon_emoji: ":cold_sweat:"
+            slackSend color:"danger", message: "Teste finalizado com erro! <${env.BUILD_URL}>", icon_emoji: ":cold_sweat:"
         }
     }
 }
