@@ -30,5 +30,12 @@
             "type": "string",
             "format": "date-time"
         }
-    }
+    },
+    "required": [
+        "name",
+        "description",
+        "image",
+        "quantity",
+        "amount"
+    ]
 }
