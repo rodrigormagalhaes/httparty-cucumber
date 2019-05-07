@@ -9,13 +9,11 @@
 bundle install
 ```
 
-- **Executar testes**:
-  - > Todos os testes:
+- **Executar testes todos os testes**:
 ```
 cucumber
 ```
-
-  - > Teste específico
+- **Executar teste específico**:
 ```
 cucumber -t @create
 ```
