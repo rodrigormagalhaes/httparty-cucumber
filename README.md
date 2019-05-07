@@ -10,8 +10,14 @@ bundle install
 ```
 
 - **Executar testes**:
+  - > Todos os testes:
 ```
 cucumber
+```
+
+  - > Teste específico
+```
+cucumber -t @create
 ```
 
 - **Relatório html**: 
