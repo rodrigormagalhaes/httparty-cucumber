@@ -9,7 +9,7 @@
 bundle install
 ```
 
-- **Executar testes todos os testes**:
+- **Executar todos os testes**:
 ```
 cucumber
 ```
