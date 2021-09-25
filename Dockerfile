@@ -1,10 +1,10 @@
 FROM ruby:3.0.2-alpine3.14
 
-RUN mkdir /httparty-cucumber
-
 VOLUME /httparty-cucumber
 
 WORKDIR /httparty-cucumber
+
+ADD /httparty-cucumber /httparty-cucumber
 
 ADD entrypoint.sh /
 
