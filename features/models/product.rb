@@ -2,7 +2,7 @@ class Product
     include HTTParty
     require_relative '../hooks/product-hook'
 
-    base_uri 'htt://5c8fa6988447f30014cb82ea.mockapi.io'
+    base_uri 'https://5c8fa6988447f30014cb82ea.mockapi.io'
 
     def initialize(bodyValue)
         @body = {:body => bodyValue}
