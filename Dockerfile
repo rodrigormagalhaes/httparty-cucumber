@@ -1,6 +1,6 @@
 FROM ruby:3.0.2-alpine3.14
 
-RUN /httparty-cucumber
+RUN mkdir /httparty-cucumber
 
 VOLUME /httparty-cucumber
 
