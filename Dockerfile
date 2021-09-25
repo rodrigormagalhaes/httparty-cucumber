@@ -6,6 +6,8 @@ VOLUME /httparty-cucumber
 
 WORKDIR /httparty-cucumber
 
+COPY /httparty-cucumber .
+
 ADD entrypoint.sh /
 
 RUN chmod +x /entrypoint.sh
