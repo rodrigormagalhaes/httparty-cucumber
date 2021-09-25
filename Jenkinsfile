@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
-                sh "git checkout ${env.BRANCH}"
+                sh "git checkout ${env.REMOTE_BRANCH}"
             }
         }
         
