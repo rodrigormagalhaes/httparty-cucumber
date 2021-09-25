@@ -1,3 +1,5 @@
 *.html
 
 report.json
+
+Gemfile.lock
