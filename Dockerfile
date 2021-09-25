@@ -4,8 +4,8 @@ VOLUME /httparty-cucumber
 
 WORKDIR /httparty-cucumber
 
-ADD $PWD/httparty-cucumber /httparty-cucumber
-
 ADD entrypoint.sh /
 
 RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
