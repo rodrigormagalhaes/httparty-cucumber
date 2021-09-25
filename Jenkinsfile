@@ -28,7 +28,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh "docker run --network=skynet -v ${pwd}:/httparty-cucumber httparty-cucumber"              
+                sh "docker run -v ${pwd}:/httparty-cucumber httparty-cucumber"              
             }
 
             post {
