@@ -24,17 +24,15 @@ pipeline {
             }	
         }
 
-        stage('Config') {
+        stage('Build image docker') {
             steps {
-                sh 'ruby -v'
-                sh 'gem install bundler'
-                sh 'bundle install'
+                sh 'docker build -t httparty-cucumber'
             }	
 		}
 
         stage('Test') {
             steps {
-                sh 'cucumber'                
+                sh 'docker run --rm httparty-cucumber'                
             }
 
             post {
