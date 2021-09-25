@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        env.BRANCH = env.REMOTE_BRANCH.startsWith('origin/') ? env.REMOTE_BRANCH - 'origin/' : env.REMOTE_BRANCH
+        env.BRANCH = env.REMOTE_BRANCH.startsWith
     }
     
     stages {
