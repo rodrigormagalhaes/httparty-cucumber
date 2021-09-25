@@ -5,8 +5,9 @@ pipeline {
         } 
     }
 
-    env.BRANCH = env.REMOTE_BRANCH.startsWith('origin/') ? env.REMOTE_BRANCH - 'origin/' : env.REMOTE_BRANCH
-
+    environment {
+        env.BRANCH = env.REMOTE_BRANCH.startsWith('origin/') ? env.REMOTE_BRANCH - 'origin/' : env.REMOTE_BRANCH
+    }
     
     stages {
         stage('Checkout') {
