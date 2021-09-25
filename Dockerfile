@@ -4,7 +4,7 @@ VOLUME /httparty-cucumber
 
 WORKDIR /httparty-cucumber
 
-ADD /httparty-cucumber /httparty-cucumber
+ADD $PWD/httparty-cucumber /httparty-cucumber
 
 ADD entrypoint.sh /
 
