@@ -6,7 +6,7 @@ VOLUME /httparty-cucumber
 
 WORKDIR /httparty-cucumber
 
-COPY httparty-cucumber .
+COPY Gemfile .
 
 ADD entrypoint.sh /
 
