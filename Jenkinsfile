@@ -1,7 +1,21 @@
 pipeline {
-    agent { docker { image 'ruby' } }
+    agent { 
+        docker { 
+            image 'ruby' 
+        } 
+    }
+
+    env.BRANCH = env.REMOTE_BRANCH.startsWith('origin/') ? env.REMOTE_BRANCH - 'origin/' : env.REMOTE_BRANCH
+
     
     stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+                sh "git checkout ${env.BRANCH}"
+            }
+        }
+        
         stage('Start Notification') {
             steps {
                 slackSend message: "Iniciando testes automatizados API. Job: `${env.JOB_NAME}`. Branch `${env.GIT_BRANCH}` :pray:"
