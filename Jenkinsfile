@@ -9,7 +9,7 @@ pipeline {
         skipDefaultCheckout(true)
         disableConcurrentBuilds()
     }
-    
+
     stages {
         stage('Checkout') {
             steps {
@@ -20,7 +20,7 @@ pipeline {
         
         stage('Start Notification') {
             steps {
-                slackSend message: "Iniciando testes automatizados API. Job: `${env.JOB_NAME}`. Branch `${env.GIT_BRANCH}` :pray:"
+                slackSend message: "Iniciando testes automatizados API. Job: `${env.JOB_NAME}`. Branch `${env.REMOTE_BRANCH}` :pray:"
             }	
         }
 
