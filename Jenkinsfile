@@ -1,9 +1,5 @@
 pipeline {
-    agent { 
-        docker { 
-            image 'ruby' 
-        } 
-    }
+    agent any
 
     options {
         skipDefaultCheckout(true)
