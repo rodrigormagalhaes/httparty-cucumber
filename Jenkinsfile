@@ -4,6 +4,11 @@ pipeline {
             image 'ruby' 
         } 
     }
+
+    options {
+        skipDefaultCheckout(true)
+        disableConcurrentBuilds()
+    }
     
     stages {
         stage('Checkout') {
