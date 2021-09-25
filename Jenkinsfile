@@ -4,10 +4,6 @@ pipeline {
             image 'ruby' 
         } 
     }
-
-    environment {
-        env.BRANCH = env.REMOTE_BRANCH.startsWith
-    }
     
     stages {
         stage('Checkout') {
