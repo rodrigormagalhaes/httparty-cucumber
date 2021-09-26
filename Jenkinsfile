@@ -35,7 +35,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh "docker run --rm httparty-cucumber"              
+                sh "docker run --rm httparty-cucumber -p json"              
             }
 
             post {
