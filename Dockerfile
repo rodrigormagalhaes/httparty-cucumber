@@ -4,7 +4,7 @@ RUN apk update && apk --no-cache add make gcc libc-dev libxml2 libxslt-dev g++ c
 
 WORKDIR /httparty-cucumber
 
-COPY . .
+COPY . /httparty-cucumber
 
 RUN chmod +x entrypoint.sh
 
