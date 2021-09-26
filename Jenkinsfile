@@ -29,13 +29,13 @@ pipeline {
 
         stage('Build image docker') {
             steps {
-                sh 'docker build -t httparty-cucumber .'
+                sh 'docker build --network=host -t httparty-cucumber .'
             }	
 		}
 
         stage('Test') {
             steps {
-                sh "docker run --rm httparty-cucumber"              
+                sh "docker run --network=host --rm httparty-cucumber -p json -p progress"              
             }
 
             post {
