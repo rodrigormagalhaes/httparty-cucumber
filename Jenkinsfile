@@ -11,9 +11,14 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
+        stage('Clean workspace') {
             steps {
                 cleanWs()
+            }
+        }
+        
+        stage('Checkout') {
+            steps {
                 checkout scm
                 sh "git checkout ${env.REMOTE_BRANCH}"
             }
