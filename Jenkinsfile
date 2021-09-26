@@ -7,6 +7,13 @@ pipeline {
     }
 
     stages {
+        
+        stage('Clean workspace') {
+            steps {
+                cleanWs()
+            }
+        }
+
         stage('Checkout') {
             steps {
                 checkout scm
@@ -42,10 +49,6 @@ pipeline {
     }
     
     post {
-        // always {
-        //     cleanWs()
-        // }
-
         success {
             slackSend color:"good", message: "Testes finalizados com sucesso! <${env.BUILD_URL}> :pepeds:"
         }
