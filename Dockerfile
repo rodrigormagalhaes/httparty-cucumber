@@ -6,6 +6,8 @@ WORKDIR /httparty-cucumber
 
 COPY . .
 
+VOLUME . .
+
 RUN chmod +x entrypoint.sh
 
 ENTRYPOINT ["./entrypoint.sh"]
