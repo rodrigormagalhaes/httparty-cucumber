@@ -2,4 +2,4 @@ default: -p json_report
 
 html_report: --format pretty --format html --out=report.html
 
-json_report: --format pretty --format json --out=reports/report.json
+json_report: --format pretty --format json --out=report.json
