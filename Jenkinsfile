@@ -29,13 +29,13 @@ pipeline {
 
         stage('Build image docker') {
             steps {
-                sh "docker build -v ${pwd}:/httparty-cucumber -t httparty-cucumber ."
+                sh 'docker build -t httparty-cucumber .'
             }	
 		}
 
         stage('Test') {
             steps {
-                sh "docker run --rm httparty-cucumber"              
+                sh "docker run --rm -v ${pwd}:/httparty-cucumber httparty-cucumber"              
             }
 
             post {
