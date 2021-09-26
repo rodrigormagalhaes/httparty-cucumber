@@ -1,5 +1,8 @@
 report.json
+*.html
 
 Gemfile.lock
 
 .DS_Store
+
+
