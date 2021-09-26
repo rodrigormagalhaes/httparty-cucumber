@@ -35,14 +35,14 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh "docker run --rm httparty-cucumber"              
+                sh "docker run --rm -n=skynet httparty-cucumber"              
             }
 
             post {
                 always {
                     cucumber buildStatus: "UNSTABLE",
                         fileIncludePattern: "**/report.json",
-                        jsonReportDirectory: 'target'
+                        jsonReportDirectory: '.'
                 }
             }
         }
