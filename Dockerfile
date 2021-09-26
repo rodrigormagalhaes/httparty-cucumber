@@ -4,10 +4,8 @@ RUN apk update && apk --no-cache add make gcc libc-dev libxml2 libxslt-dev g++ c
 
 WORKDIR /httparty-cucumber
 
-COPY . /httparty-cucumber
+COPY . .
 
-ADD entrypoint.sh /
+RUN chmod +x entrypoint.sh
 
-RUN chmod +x /entrypoint.sh
-
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
