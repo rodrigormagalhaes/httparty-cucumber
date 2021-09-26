@@ -7,12 +7,6 @@ pipeline {
     }
 
     stages {
-        stage('Clean Workspace') {
-            steps {
-                cleanWs()
-            }
-        }
-
         stage('Checkout') {
             steps {
                 checkout scm
@@ -34,7 +28,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh "docker run --rm -v httparty-cucumber"              
+                sh "docker run --rm -v ${pwd}:/httparty-cucumber httparty-cucumber"              
             }
 
             post {
@@ -48,9 +42,9 @@ pipeline {
     }
     
     post {
-        // always {
-        //     cleanWs()
-        // }
+        always {
+            cleanWs()
+        }
 
         success {
             slackSend color:"good", message: "Testes finalizados com sucesso! <${env.BUILD_URL}> :pepeds:"
