@@ -29,7 +29,7 @@ pipeline {
 
         stage('Build image docker') {
             steps {
-                sh 'docker build -t httparty-cucumber .'
+                sh "docker build -v ${pwd}:/httparty-cucumber -t httparty-cucumber ."
             }	
 		}
 
