@@ -1,12 +1,12 @@
 FROM ruby:3.0.2-alpine3.14
 
-RUN mkdir /httparty-cucumber
+# RUN mkdir /httparty-cucumber
 
-VOLUME /httparty-cucumber
+# VOLUME /httparty-cucumber
 
 WORKDIR /httparty-cucumber
 
-COPY Gemfile .
+COPY . .
 
 ADD entrypoint.sh /
 
