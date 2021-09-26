@@ -1,15 +1,11 @@
 FROM ruby:3.0.2-alpine3.14
 
-# RUN mkdir /httparty-cucumber
-
-# VOLUME /httparty-cucumber
+RUN apk update && apk --no-cache add make gcc libc-dev libxml2 libxslt-dev g++ curl autoconf libtool automake build-base libexecinfo snappy libexecinfo-dev
 
 WORKDIR /httparty-cucumber
 
 COPY . .
 
-ADD entrypoint.sh /
+RUN chmod +x entrypoint.sh
 
-RUN chmod +x /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]

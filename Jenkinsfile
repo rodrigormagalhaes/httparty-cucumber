@@ -28,7 +28,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh "docker run -v ${pwd}:/httparty-cucumber httparty-cucumber"              
+                sh "docker run --rm httparty-cucumber"              
             }
 
             post {
