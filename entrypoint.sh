@@ -6,4 +6,4 @@ bundle install
 
 echo 'Executando testes ...'
 
-cucumber -p $@
+cucumber -p json
