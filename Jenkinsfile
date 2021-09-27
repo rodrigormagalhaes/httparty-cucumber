@@ -10,7 +10,6 @@ pipeline {
 
         stage("Warm Up") {
             steps {
-                currentBuild.displayName = "#${env.BUILD_NUMBER} Running in ${branchName}..."
                 sh "docker rmi qrcode-test || true"
             } 
         }
