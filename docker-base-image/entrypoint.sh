@@ -1,5 +1,6 @@
 #!/bin/sh
 
+cd /httparty-cucumber
 
 gem install bundler
 bundler update --bundler
