@@ -10,7 +10,7 @@ pipeline {
 
         stage("Warm Up") {
             steps {
-                sh "docker rmi qrcode-test || true"
+                sh "docker rmi httparty-cucumber || true"
             } 
         }
         
