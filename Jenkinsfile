@@ -35,7 +35,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                def pwd = sh(script:'pwd', returnStdout: true).trim() as String
+                pwd = sh(script:'pwd', returnStdout: true).trim() as String
                 sh "docker run --network=host --rm  -v ${pwd}:/httparty-cucumber httparty-cucumber:latest -p json -p progress"              
             }
 
