@@ -35,7 +35,7 @@ pipeline {
 
         stage('Build image docker') {
             steps {
-                sh 'cd docker-base-image && docker build --network=host -t httparty-cucumber .'
+                sh 'docker build --network=host -t httparty-cucumber .'
             }	
 		}
 
