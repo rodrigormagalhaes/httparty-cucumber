@@ -7,6 +7,15 @@ pipeline {
     }
 
     stages {
+
+        stage("Warm Up") {
+            try {
+                currentBuild.displayName = "#${env.BUILD_NUMBER} Running in ${branchName}..."
+                sh "docker rmi qrcode-test || true"
+            } catch (Exception e) {
+                sendMsgToSlack("Problemas no Warm Up", ERROR_COLOR)
+            }
+        }
         
         stage('Clean workspace') {
             steps {
