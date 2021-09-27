@@ -10,7 +10,7 @@ VOLUME /httparty-cucumber
 
 WORKDIR /httparty-cucumber
 
-COPY . .
+COPY . /httparty-cucumber
 
 ADD entrypoint.sh /
 
