@@ -45,7 +45,7 @@ pipeline {
                     pwd = sh(script:'pwd', returnStdout: true).trim() as String
 
                 }                
-                sh "docker run -u root --network=host -v ${pwd}:/httparty-cucumber httparty-cucumber:latest -p json -p progress"              
+                sh "docker run -u root --network=host httparty-cucumber:latest -p json -p progress"              
             }
 
             post {
