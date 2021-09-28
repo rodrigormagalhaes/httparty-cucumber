@@ -7,13 +7,7 @@ pipeline {
     }
 
     stages {
-
-        stage("Warm Up") {
-            steps {
-                sh "docker rmi httparty-cucumber || true"
-            } 
-        }
-        
+       
         stage('Clean workspace') {
             steps {
                 cleanWs()
@@ -45,7 +39,7 @@ pipeline {
                     pwd = sh(script:'pwd', returnStdout: true).trim() as String
 
                 }                
-                sh "docker run -u root --network=host httparty-cucumber:latest"              
+                sh "docker run --network=host httparty-cucumber:latest"              
             }
 
             post {
