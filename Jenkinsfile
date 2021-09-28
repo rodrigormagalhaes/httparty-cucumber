@@ -29,7 +29,7 @@ pipeline {
 
         stage('Build image docker') {
             steps {
-                sh 'docker build --network=host -t httparty-cucumber .'
+                sh 'docker build -t httparty-cucumber .'
             }	
 		}
 
@@ -39,7 +39,7 @@ pipeline {
                     pwd = sh(script:'pwd', returnStdout: true).trim() as String
 
                 }                
-                sh "docker run --network=host httparty-cucumber:latest"              
+                sh "docker run -v ${pwd}:/httparty-cucumber httparty-cucumber:latest"              
             }
 
             post {
