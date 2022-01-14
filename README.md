@@ -1,6 +1,6 @@
-### Automação de testes de contrato de API com Httparty e Cucumber
+### Automação de testes de API com Ruby, Httparty e Cucumber
 
-- **Pré requisito**
+- **Pré requisitos**
   - > [Ruby](https://www.ruby-lang.org/pt/documentation/installation/) 
   - > [Bundler](https://bundler.io/)
 
