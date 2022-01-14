@@ -1,0 +1,7 @@
+default: -p progress -p json
+    
+progress: --format progress
+    
+pretty: --format pretty
+html:  --format html --out=reports/report.html
+json:  --format json --out=reports/report.json
