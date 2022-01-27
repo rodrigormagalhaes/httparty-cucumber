@@ -3,3 +3,5 @@
 report.json
 
 Gemfile.lock
+
+.DS_Store
