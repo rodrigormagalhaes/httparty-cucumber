@@ -19,7 +19,7 @@ cucumber -t @create
 ```
 
 - **Relatório html**: 
-  > ./report.html
+  > ./reports/report.html
 
 
 #### Tecnologias
