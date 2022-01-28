@@ -1,4 +1,4 @@
-default: -p progress -p json
+default: -p json -p pretty
     
 progress: --format progress
     
